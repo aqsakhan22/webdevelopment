@@ -1,2 +1,10 @@
 https://www.youtube.com/watch?v=HVjjoMvutj4
 2:05:
+
+git init
+git remote add origin https://github.com/aqsakhan22/webdevelopment.git
+git checkout -b NEW_BRANCH_NAME
+git add .
+git commit -m "first"
+git push -u origin NEW_BRANCH_NAME         
+
