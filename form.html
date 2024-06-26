@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form Validation</h2>
+
+    <fieldset>
+        <legend>Enquiry</legend>
+        <form>
+            Name:<input type="text" name="name" placeholder="Enter your name"/>
+            <br/>
+            <br/>
+            Address: <textarea name="address">Type Description </textarea>
+            <br/>
+            <br/>
+            Gender: <input type="radio" value="f" name="gender" />Female
+            <input type="radio" value="m"  name="gender"/> Male
+            <br/>
+            <br/>
+            Country
+            <select>
+                <option> 
+                    Enter a Country
+                </option>
+                <optgroup label="Asia">
+            
+                    <option value="Pakistan">
+                        Pakistan
+                    </option>
+                    <option value="India">
+                        India
+                    </option>
+                    <option value="Usa">
+                        USA
+                    </option>
+                </optgroup>
+               
+            </select>
+    
+            <br/>
+            <br/>
+            Hobbies:
+
+            <input type="checkbox" value="cooking" name="hobbies[]"/> Cooking
+            <input type="checkbox" value="reading" name="hobbies[]"/> Reading
+            <br/>
+            <br/>
+            Image
+            <input type="file" name="image"/>
+            <input  type="submit" name="Send"/>
+            <input  type="reset" name="Reset"/>
+            <br/>
+            <br/>
+    
+    
+           
+    
+            
+    
+    
+    
+        </form>
+    </fieldset>
+  
+</body>
+</html>

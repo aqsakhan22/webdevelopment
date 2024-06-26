@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Click the button to display the date.</p>
+<button onclick="displayDate()">The time is?</button>
+    <script>
+        function displayDate() {
+        //   document.getElementById("demo").innerHTML = Date();
+        // T2
+//         let firstName = "John";
+// let lastName = "Doe";
+// let text = `Welcome ${firstName}, ${lastName}!`;
+// document.getElementById("demo").innerHTML = text;
+// T3
+
+
+
+// let name = "Name of fruits is ";
+// let fruits=['apple','mango','orange'];
+// let htmlCode=`<h2> ${name} is </h2><ul`;
+// for (const x in fruits){
+//     htmlCode+=`<li>${fruits[x]}</li>`;
+// }
+// htmlCode+=`</ul>`;
+
+// document.getElementById('demo').innerHTML=htmlCode;
+
+
+// let header = "Template Strings";
+//  let tags = ["template strings", "javascript", "es6"];
+
+// let html = `<h2>${header}</h2><ul>`;
+//  // in in for loop use for access using index of use for accessing data without inddex just get data direct
+// for (const x of tags) {
+//   html += `<li>${x}</li>`;
+// }
+
+// html += `</ul>`;
+// document.getElementById("demo").innerHTML = html;
+// t4
+// let text = "<ul>";
+// tags.forEach(myFunction);
+// text += "</ul>";
+// document.getElementById("demo").innerHTML = text;
+// function myFunction(value) {
+//             console.log(value);
+//   text += "<li>" + value + "</li>";
+         
+// }
+
+// Arrays Methods
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let text = fruits.at(2);
+// let  text=fruits.copyWithin(2, 0)
+// fruits.shift();  // methods remove first element of array
+// fruits.unshift("Lemon");
+// fruits.join(" * ");s
+// fruits.splice(0, 1);
+// ruits.toSpliced(0, 1)
+//  fruits.indexOf("Apple")
+
+// const numbers = [4, 9, 16, 25, 29];
+// let first = numbers.find(myFunction);
+
+// function myFunction(value, index, array) {
+//     console.log(value,index,array);
+//   return value > 18;
+// }
+// const temp = [27, 28, 30, 40, 42, 35, 30];
+// let high = temp.findLast(x => x > 40);
+// document.getElementById("demo").innerHTML = high;
+
+
+// The splice() method adds new items to an array.
+
+// The slice() method slices out a piece of an array.
+
+// t5
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d = new Date("2021-03-25");
+let month = months[d.getMonth()];
+console.log(d.getMonth());
+document.getElementById("demo").innerHTML = month;
+
+
+}
+         
+
+
+
+
+</script>
+
+        </script>
+        
+        <p id="demo"></p>
+</body>
+</html>

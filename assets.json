@@ -1,0 +1,11 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.bmadevelopers.research",
+        "sha256_cert_fingerprints":
+          ["F1:3B:D7:5B:EE:FF:7D:D6:9F:77:EC:2A:4B:C6:50:F6:F1:B1:EA:5F:A4:EF:1A:9F:FD:FA:A4:9A:D3:05:F0:84"]
+      }
+    }
+  ]
