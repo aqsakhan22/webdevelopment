@@ -32,6 +32,42 @@
             height: 250px;
             float: left;
         }
+        .position{
+            background-color:grey;
+            height: 800px;
+            position: relative;
+        }
+        .relative{
+            background-color: aqua;
+            position: relative;
+            left: 100px;
+            right: 100px;
+            top: 10px;
+        }
+        .absolute{
+            background-color: aquamarine;
+            position: absolute;
+            left: 100px;
+            right: 100px;
+            top: 100px;
+            height: 100px;
+            width: 200px;
+             /* top: 100px; */
+        }
+        .sticky{
+            background-color:bisque;
+            position: sticky;
+            top: 10;
+            /* height: 100px; */
+            /* bottom: 100px; */
+        
+        
+        }
+        .fixed{
+            background-color: azure;
+            position: fixed;
+            bottom: 0px;
+        }
     </style>
 </head>
 <body>
@@ -56,6 +92,16 @@
 
  <!-- parent END row -->
 </div>
+<div class="position"> 
+    <div class="relative">Hello I am relative</div>
+    <div class="absolute">Hello I am absolute</div>
+    <div class="fixed">Hello I am fixed</div>
+    <div class="sticky">Hello I am sticky</div>
+ 
+
+</div>
+
+
 
 <!-- END MAIN DIV -->
     </div> 
