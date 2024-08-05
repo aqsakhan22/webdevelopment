@@ -4,12 +4,12 @@ const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   console.log('Getting file');
     res.sendFile(__dirname + '/index.html');
 });
-
 
 io.on('connection', (socket) => {
   console.log('a user connected');
@@ -17,8 +17,10 @@ io.on('connection', (socket) => {
     console.log('message: ' + msg);
      io.emit('chat message', msg);
   });
-  // socket.emit('some event', { someProperty: 'some value', otherProperty: 'other value' });
+  
+   socket.emit('some event', { someProperty: 'some value', otherProperty: 'other value' });
 });
-server.listen(3000, () => {
+
+server.listen(port, () => {
   console.log('listening on *:3000');
 });

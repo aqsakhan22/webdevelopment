@@ -16,6 +16,7 @@
         #messages > li { padding: 0.5rem 1rem; }
         #messages > li:nth-child(odd) { background: #efefef; }
       </style>
+      <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
   <h1>Hello world</h1>
@@ -26,7 +27,7 @@
       
     </form>
 </body>
-<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/socket.io/socket.io.js"></script> -->
 <script>
   var socket = io();
   var form = document.getElementById('form');
