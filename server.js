@@ -4,7 +4,7 @@ import http from 'http';
 // import path from 'path';
 import { fileURLToPath } from 'url';
 import path from 'path';
-
+import fs from 'fs';
 // const url=require('url');
 const port =8000;
 const __filename = fileURLToPath(import.meta.url);
@@ -12,7 +12,7 @@ const __dirname=path.dirname(__filename);
 console.log("file name is ",__filename,"directory name is",__dirname);
 //url.fileURLtoPath(import.meta.url);
 // console.log(url.fileURLToPat(import.meta.url));
-const server = http.createServer((req,res) =>{
+const server = http.createServer( async (req,res)  => {
     // part1
     // res.setHeader('Content-Type','text/html')
     // res.end("<h1>hello world</h1>");
@@ -25,32 +25,48 @@ const server = http.createServer((req,res) =>{
 // res.writeHead(200,{'Content-Type':'text/html'});
 // res.end('<h1>Hello World</h1>');
 
-
-
-try{
+try {
 
     if(req.method == 'GET'){
-
-        if(req.url == '/'){
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.end('<h1>Home Page</h1>');
+        let filePath; 
+        if(req.url === '/'){
+        filePath=path.join(__dirname,'public','index.html');
+            // res.writeHead(200,{'Content-Type':'text/html'});
+            // res.end('<h1>Home Page</h1>');
         }
-        if(req.url == '/aboutus'){
-            res.writeHead(200,{'Content-Type':'text/html'});
-            res.end('<h1>About Us</h1>');
+       else if(req.url === '/aboutus'){
+            filePath=path.join(__dirname,'public','aboutus.html');
+            // res.writeHead(200,{'Content-Type':'text/html'});
+            // res.end('<h1>About Us</h1>');
         }
-        if(req.url == '/userinfo'){
+        else if(req.url === '/userinfo'){
             res.writeHead(200,{'Content-Type':'application/json'});
             res.end(JSON.stringify({'name':"aaa khan"}))
         }
+        else{
+            throw new Error("Not Found");
+        }
+        
+        console.log("file path is ",filePath);
+        const data= await fs.readFileSync(filePath);
+       // res.writeHead(200, {'Content-Type': 'text/html'});
+         res.setHeader('Content-Type','text/html');
+         res.write(data);
+         res.end();      
         
     }
-    
+
+
+    else{
+        throw new Error("Method Not Allowed");
+
+    }
 
 }
 catch(e){
-
-    res.writeHead(500,)
+    console.log("catch error is",e );
+    res.writeHead(500,{'Content-Type':'text/Plain'})
+    res.end('Server Error');
 }
 
 });
